@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>admin</title>
+    <link rel="icon" type="image/png" sizes="1200x1156" href="assets/img/tut.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu-1.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/summernote/summernote-bs4.css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><span>Hello Phiwa</span> </li>
+                <li> <a href="appointments.html">Appointments</a></li>
+                <li><a href="history.html">Sessions History</a> </li>
+                <li> <a href="labs.html">Manage Labs</a></li>
+                <li> <a href="profile.html">Profile</a></li>
+                <li> <a href="post.html">Post</a></li>
+                <li> <a href="users.html">Manage Users</a></li>
+            </ul>
+        </div>
+        <div class="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row" id="top">
+                    <div class="col-2 col-lg-1 col-xl-1"><a class="btn btn-link" role="button" id="menu-toggle" href="#menu-toggle"><i class="fa fa-bars"></i></a></div>
+                    <div class="col-4 col-sm-4 offset-6 offset-sm-6 offset-md-6 offset-lg-7 offset-xl-7" id="user">
+                        <div class="text-right" id="user_info"><a href="../index.html"><i class="fa fa-sign-out"></i></a><img src="assets/img/dev.jpg"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>
+                            <h1>Post an update</h1>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row spacing">
+                    <div class="col">
+                        <form id="post-form">
+                            <div>
+                                <h4>Post Type</h4>
+                                <p><label>News update<input type="radio" id="news" class="radio" name="post-type" value="news"><span>&nbsp;|&nbsp;</span></label><label>Article<input type="radio" id="article" class="radio" name="post-type" value="article"></label></p>
+                                <div><label>Select Image</label>
+                                    <div><input type="file" class="file post-img" id="post-img" data-browse-on-zone-click="true" onchange="readURL(this);"></div>
+                                </div>
+                                <div id="preview-div"><img class="img-fluid profile-picture" id="profile-preview" src="assets/img/unset2.png"></div>
+                                <div id="warning"><span id="unsupported">Unsupported format: Only JPEG, JPG, PNG, GIF allowed</span><span id="large">File too large</span></div>
+                                <div>
+                                    <input class="form-control topic-input" type="text" placeholder="Topic">
+                                </div>
+                                <div class="textEditor">
+                                    <textarea name="" id="summernote"></textarea>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-submit post-btn" id="post" type="submit">Post</button></form>
+                    </div>
+                    <div class="spacing"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/summernote/summernote-bs4.js"></script>
+    <script src="assets/js/preview.js"></script>
+    <script src="assets/js/Sidebar-Menu.js"></script>
+
+    <script>
+        $('#summernote').summernote({
+            height: 300,
+            disableResizeEditor: true,
+
+            defaultFontName: 'Open Sans',
+
+            fontNames: ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier', 'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times', 'Times New Roman', 'Verdana', 'Open Sans'],
+        });
+    </script>
+</body>
+
+</html>

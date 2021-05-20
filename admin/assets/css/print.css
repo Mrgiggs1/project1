@@ -1,0 +1,11 @@
+@media print {
+    body {
+        border: 1px solid #aaa;
+    }
+    #printableTable {
+        display: block;
+    }
+    #printableTable table thead tr th {
+        color: red;
+    }
+}
